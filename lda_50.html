@@ -2,16 +2,18 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Climate LDA topic model with 25 topics</title>
+    <title>Climate LDA topic model with 50 topics</title>
     <script src="./js/d3.v3.min.js"></script>
     <script src="./js/ldavis.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/style.min.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
   </head>
 
   <body>
     <div id="lda"></div>
     <script>
-      var vis = new LDAvis("#lda", "./data/lda_25.json");
+      var vis = new LDAvis("#lda", "./data/lda_50.json");
     </script>
   </body>
 </html>
