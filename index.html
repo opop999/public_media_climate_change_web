@@ -1,6 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is a research project examining the coverage of climate change by Czech public media outlets, ČT 1 and ČT 24. It is using topic modeling to identify the main themes and trends in the coverage of this issue between 2012-2022. This site contains visualizations, which provide an overview of the results for
+    different numbers of topics, using both Latent Dirichlet Allocation
+      (LDA) and Non-Negative Matrix Factorization (NMF) techniques. "
+    />
     <title>Climate Change Topic Modeling Visualizations</title>
     <!-- Bootswatch CSS -->
     <link
@@ -8,7 +17,11 @@
       href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/lux/bootstrap.min.css"
     />
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
     <style>
       .carousel-control-prev-icon,
       .carousel-control-next-icon {
@@ -17,11 +30,12 @@
       }
     </style>
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
   </head>
+  <!-- Body -->
   <body>
-    <body>
     <div class="container mt-4 text-center">
+      <!-- Titles -->
       <h1 class="display-4">Climate Change Reporting</h1>
       <br />
       <h2>Topic Modeling Visualizations</h2>
@@ -29,98 +43,188 @@
       <h4>Czech Television Transcripts (2012-2022)</h4>
       <hr />
 
-          <!-- Authors -->
-<div class="card-columns mt-3">
-  <div class="card bg-light border-light">
-    <div class="card-body text-center">
-      <h5 class="card-title">Andrea Culkova</h5>
-      <p class="card-text">Academy of Performing Arts in Prague</p>
-    </div>
-  </div>
-  <div class="card bg-light border-light">
-    <div class="card-body text-center ">
-      <h5 class="card-title">Ondrej Pekacek</h5>
-      <p class="card-text">Charles University</p>
-    </div>
-  </div>
-    <div class="card bg-light border-light">
-      <div class="card-body text-center">
-        <h5 class="card-title">Irena Reifova</h5>
-        <p class="card-text">Charles University</p>
+      <!-- Authors -->
+      <div class="card-columns mt-3">
+        <div class="card bg-light border-light">
+          <div class="card-body text-center">
+            <h5 class="card-title">Andrea Culkova</h5>
+            <p class="card-text">Academy of Performing Arts in Prague</p>
+          </div>
+        </div>
+        <div class="card bg-light border-light">
+          <div class="card-body text-center">
+            <h5 class="card-title">Ondrej Pekacek</h5>
+            <p class="card-text">Charles University</p>
+          </div>
+        </div>
+        <div class="card bg-light border-light">
+          <div class="card-body text-center">
+            <h5 class="card-title">Irena Reifova</h5>
+            <p class="card-text">Charles University</p>
+          </div>
+        </div>
+        <div class="card bg-light border-light">
+          <div class="card-body text-center">
+            <h5 class="card-title">Irene Elmerot</h5>
+            <p class="card-text">Stockholm University</p>
+          </div>
+        </div>
+        <hr />
       </div>
-    </div>
-    <div class="card bg-light border-light">
-      <div class="card-body text-center">
-        <h5 class="card-title">Irene Elmerot</h5>
-        <p class="card-text">Stockholm University</p>
-      </div>
-    </div>
-    <hr />
 
-</div>
+      <!-- Lead text -->
       <p class="lead">
         This project investigates the discourse on climate change in Czech
         television, using topic modeling to identify the main themes and trends
-        in the coverage of this issue between 2012-2022. <br /> <br />
-        The following visualizations (created by D3.js & LDAVis) provide an overview of the results for
-        different numbers of topics, using both <em>Latent Dirichlet Allocation
-          (LDA)</em> and <em>Non-Negative Matrix Factorization (NMF)</em> techniques.
+        in the coverage of this issue between 2012-2022. <br />
+        <br />
+        The following visualizations (created by D3.js & LDAVis) provide an
+        overview of the results for different numbers of topics, using both
+        <em>Latent Dirichlet Allocation (LDA)</em> and
+        <em>Non-Negative Matrix Factorization (NMF)</em> techniques.
       </p>
       <hr />
+
       <!-- Carousel -->
-<div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner">
-    <div class="carousel-item active ">
-      <img src="./images/image_1.png" class="d-block w-100" alt="Carousel Image">
-    </div>
-    <div class="carousel-item">
-      <img src="./images/image_2.png" class="d-block w-100" alt="Carousel Image">
-    </div>
-    <div class="carousel-item">
-      <img src="./images/image_3.png" class="d-block w-100" alt="Carousel Image">
-    </div>
-    <div class="carousel-item">
-      <img src="./images/image_4.png" class="d-block w-100" alt="Carousel Image">
-    </div>
-    <div class="carousel-item">
-      <img src="./images/image_5.png" class="d-block w-100" alt="Carousel Image">
-  </div>
-  <div class="carousel-item">
-    <img src="./images/image_6.png" class="d-block w-100" alt="Carousel Image">
-  </div>
-  <div class="carousel-item">
-    <img src="./images/image_7.png" class="d-block w-100" alt="Carousel Image">
-  </div>
-  <div class="carousel-item">
-    <img src="./images/image_8.png" class="d-block w-100" alt="Carousel Image">
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<div class="alert alert-light">
-  <p class="mb-0">How does an AI image generation model - <a href="https://openai.com/dall-e-2/">DALL-E 2</a> - imagine news media reporting on climate change?</p>
-</div>
-<hr />
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./images/image_1.png"
+              class="d-block w-100"
+              alt="Carousel Image"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./images/image_2.png"
+              class="d-block w-100"
+              alt="Carousel Image"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./images/image_3.png"
+              class="d-block w-100"
+              alt="Carousel Image"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./images/image_4.png"
+              class="d-block w-100"
+              alt="Carousel Image"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./images/image_5.png"
+              class="d-block w-100"
+              alt="Carousel Image"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./images/image_6.png"
+              class="d-block w-100"
+              alt="Carousel Image"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./images/image_7.png"
+              class="d-block w-100"
+              alt="Carousel Image"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./images/image_8.png"
+              class="d-block w-100"
+              alt="Carousel Image"
+            />
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Carousel Description -->
+      <div class="alert alert-light">
+        <p class="mb-0">
+          How does an AI image generation model -
+          <a href="https://openai.com/dall-e-2/">DALL-E 2</a> - imagine news
+          media reporting on climate change?
+        </p>
+      </div>
+      <hr />
+      <!-- Model links list-->
       <div class="row">
         <div class="col-6">
           <h4>LDA</h4>
           <h5>Nouns & Adjectives</h5>
           <ul class="list-group">
-            <li class="mb-2 list-group-item list-group-item-action"><a href="./model_visualizations/lda_10.html">LDA with 10 topics</a></li>
-            <li class="mb-2 list-group-item list-group-item-action"><a href="./model_visualizations/lda_15.html">LDA with 15 topics</a></li>
-            <li class="mb-2 list-group-item list-group-item-action"><a href="./model_visualizations/lda_20.html">LDA with 20 topics</a></li>
-            <li class="mb-2 list-group-item list-group-item-action"><a href="./model_visualizations/lda_25.html">LDA with 25 topics</a></li>
-            <li class="mb-2 list-group-item list-group-item-action"><a href="./model_visualizations/lda_30.html">LDA with 30 topics</a></li>
-            <li class="mb-2 list-group-item list-group-item-action"><a href="./model_visualizations/lda_35.html">LDA with 35 topics</a></li>
-            <li class="mb-2 list-group-item list-group-item-action"><a href="./model_visualizations/lda_40.html">LDA with 40 topics</a></li>
-            <li class="mb-2 list-group-item list-group-item-action"><a href="./model_visualizations/lda_45.html">LDA with 45 topics</a></li>
-            <li class="mb-2 list-group-item list-group-item-action"><a href="./model_visualizations/lda_50.html">LDA with 50 topics</a></li>
+            <li class="mb-2 list-group-item list-group-item-action">
+              <a href="./model_visualizations/lda_10.html"
+                >LDA with 10 topics</a
+              >
+            </li>
+            <li class="mb-2 list-group-item list-group-item-action">
+              <a href="./model_visualizations/lda_15.html"
+                >LDA with 15 topics</a
+              >
+            </li>
+            <li class="mb-2 list-group-item list-group-item-action">
+              <a href="./model_visualizations/lda_20.html"
+                >LDA with 20 topics</a
+              >
+            </li>
+            <li class="mb-2 list-group-item list-group-item-action">
+              <a href="./model_visualizations/lda_25.html"
+                >LDA with 25 topics</a
+              >
+            </li>
+            <li class="mb-2 list-group-item list-group-item-action">
+              <a href="./model_visualizations/lda_30.html"
+                >LDA with 30 topics</a
+              >
+            </li>
+            <li class="mb-2 list-group-item list-group-item-action">
+              <a href="./model_visualizations/lda_35.html"
+                >LDA with 35 topics</a
+              >
+            </li>
+            <li class="mb-2 list-group-item list-group-item-action">
+              <a href="./model_visualizations/lda_40.html"
+                >LDA with 40 topics</a
+              >
+            </li>
+            <li class="mb-2 list-group-item list-group-item-action">
+              <a href="./model_visualizations/lda_45.html"
+                >LDA with 45 topics</a
+              >
+            </li>
+            <li class="mb-2 list-group-item list-group-item-action">
+              <a href="./model_visualizations/lda_50.html"
+                >LDA with 50 topics</a
+              >
+            </li>
           </ul>
         </div>
         <div class="col-6">
@@ -128,48 +232,72 @@
           <h5>Nouns & Adjectives, TF-IDF</h5>
           <ul class="list-group">
             <li class="mb-2 list-group-item list-group-item-action">
-              <a href="./model_visualizations/nmf_10.html">NMF with 10 topics</a>
+              <a href="./model_visualizations/nmf_10.html"
+                >NMF with 10 topics</a
+              >
             </li>
             <li class="mb-2 list-group-item list-group-item-action">
-              <a href="./model_visualizations/nmf_15.html">NMF with 15 topics</a>
+              <a href="./model_visualizations/nmf_15.html"
+                >NMF with 15 topics</a
+              >
             </li>
             <li class="mb-2 list-group-item list-group-item-action">
-              <a href="./model_visualizations/nmf_20.html">NMF with 20 topics</a>
+              <a href="./model_visualizations/nmf_20.html"
+                >NMF with 20 topics</a
+              >
             </li>
             <li class="mb-2 list-group-item list-group-item-action">
-              <a href="./model_visualizations/nmf_25.html">NMF with 25 topics</a>
+              <a href="./model_visualizations/nmf_25.html"
+                >NMF with 25 topics</a
+              >
             </li>
             <li class="mb-2 list-group-item list-group-item-action">
-              <a href="./model_visualizations/nmf_30.html">NMF with 30 topics</a>
+              <a href="./model_visualizations/nmf_30.html"
+                >NMF with 30 topics</a
+              >
             </li>
             <li class="mb-2 list-group-item list-group-item-action">
-              <a href="./model_visualizations/nmf_35.html">NMF with 35 topics</a>
+              <a href="./model_visualizations/nmf_35.html"
+                >NMF with 35 topics</a
+              >
             </li>
             <li class="mb-2 list-group-item list-group-item-action">
-              <a href="./model_visualizations/nmf_40.html">NMF with 40 topics</a>
+              <a href="./model_visualizations/nmf_40.html"
+                >NMF with 40 topics</a
+              >
             </li>
             <li class="mb-2 list-group-item list-group-item-action">
-              <a href="./model_visualizations/nmf_45.html">NMF with 45 topics</a>
+              <a href="./model_visualizations/nmf_45.html"
+                >NMF with 45 topics</a
+              >
             </li>
             <li class="mb-2 list-group-item list-group-item-action">
-              <a href="./model_visualizations/nmf_50.html">NMF with 50 topics</a>
+              <a href="./model_visualizations/nmf_50.html"
+                >NMF with 50 topics</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </div>
-
     <!-- Footer -->
-<footer class="bg-light py-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <p class="mb-0">
-          Page by <a href="https://www.linkedin.com/in/ondrej-pekacek/">Ondrej Pekacek</a> | View project on <a href="https://github.com/opop999/public_media_climate_change">GitHub</a>
-        </p>
+    <footer class="bg-light py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="mb-0">
+              Page by
+              <a href="https://www.linkedin.com/in/ondrej-pekacek/"
+                >Ondrej Pekacek</a
+              >
+              | View project on
+              <a href="https://github.com/opop999/public_media_climate_change"
+                >GitHub</a
+              >
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </footer>
   </body>
 </html>
